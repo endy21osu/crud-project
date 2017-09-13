@@ -18,9 +18,6 @@
               <label for="msg">Post</label>
               <textarea rows="5" class="form-control" id="msg" v-model="post.msg"></textarea>
             </div>
-            <div class="checkbox">
-              <label><input type="checkbox"> Remember me</label>
-            </div>
             <button v-if="ready" class="btn btn-default" v-on:click="save(post)">Submit</button>
           </form>
         </div>
@@ -82,21 +79,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/*h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}*/
 </style>

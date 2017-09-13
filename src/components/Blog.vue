@@ -1,14 +1,24 @@
 <template>
-  <div class="container-fluid bg-3 text-center">
+  <div class="container-fluid bg-3">
     <h2>{{title}}</h2>
     <h3 class="margin">{{msg}}</h3><br>
     <div class="row">
-      <div class="col-sm-12" v-for="post in get()">
-        <p>{{post.title}}</p>
-        <p>{{post.msg}}</p>
-        <p>{{post.author}}</p>
-        <p>{{post.date | dateformat}}</p>
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4" v-for="post in get()">
+        <div class="well">
+          <div class="media">
+        		<div class="media-body">
+          		<h4 class="media-heading">{{post.title}}</h4>
+              <p class="text-right">By {{post.author}}</p>
+              <p>{{post.msg}}</p>
+              <ul class="list-inline list-unstyled">
+        			     <li><span><i class="glyphicon glyphicon-calendar"></i>{{post.date | dateformat}}</span></li>
+      			  </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="col-sm-4"></div>
     </div>
   </div>
 </template>
@@ -48,21 +58,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/*h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}*/
 </style>
